@@ -1,0 +1,115 @@
+<%- include('templates/header', {title: 'Login' }) %>
+
+
+
+    <div
+        class="min-h-screen w-full grid grid-cols-1 lg:grid-cols-12 bg-green-50 dark:bg-slate-950 transition-colors duration-300">
+
+        <div class="col-span-1 lg:col-span-5 flex items-center justify-center p-6 sm:p-12 z-20 relative">
+
+            <button id="theme-toggle"
+                class="absolute top-6 right-6 p-2.5 rounded-lg border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 text-slate-500 dark:text-slate-400 hover:bg-slate-100 dark:hover:bg-slate-800 transition-all">
+                <svg id="theme-toggle-dark-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path>
+                </svg>
+                <svg id="theme-toggle-light-icon" class="hidden w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                    <path
+                        d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.243 4.243a1 1 0 011.414 0l.707.707a1 1 0 01-1.414 1.414l-.707-.707a1 1 0 010-1.414zM17 10a1 1 0 01-1 1h-1a1 1 0 110-2h1a1 1 0 011 1zm-2.828 4.243a1 1 0 010 1.414l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 0zM10 18a1 1 0 01-1-1v-1a1 1 0 112 0v1a1 1 0 01-1 1zm-4.243-4.243a1 1 0 01-1.414 0l-.707-.707a1 1 0 011.414-1.414l.707.707a1 1 0 010 1.414zM4 10a1 1 0 01-1 1H2a1 1 0 110-2h1a1 1 0 011 1zm1.414-4.243a1 1 0 010-1.414l.707-.707a1 1 0 011.414 1.414l-.707.707a1 1 0 01-1.414 0z"
+                        fill-rule="evenodd" clip-rule="evenodd"></path>
+                </svg>
+            </button>
+
+            <div class="w-full max-w-[400px]">
+                <div class="mb-10">
+                    <h1 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight transition-colors">
+                        Iniciar Sesión</h1>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1 transition-colors">Ingresa tus datos para
+                        continuar.</p>
+                </div>
+
+                <form action="#" class="space-y-5">
+                    <div>
+                        <label
+                            class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5 transition-colors">Email</label>
+                        <input type="email" required
+                            class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 dark:text-white"
+                            placeholder="admin@autoparts.com">
+                    </div>
+
+                    <div>
+                        <div class="flex justify-between items-center mb-1.5">
+                            <label
+                                class="block text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors">Contraseña</label>
+                            <a href="#"
+                                class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline transition-colors">¿La
+                                olvidaste?</a>
+                        </div>
+                        <input type="password" required
+                            class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 dark:text-white"
+                            placeholder="••••••••">
+                    </div>
+
+                    <button type="submit"
+                        class="w-full bg-slate-900 dark:bg-emerald-600 hover:bg-slate-800 dark:hover:bg-emerald-500 text-white font-bold py-3 rounded-md transition-all duration-200 transform active:scale-[0.98] mt-2 shadow-lg dark:shadow-emerald-900/20">
+                        Entrar al Sistema
+                    </button>
+                </form>
+
+                <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
+                    <p class="text-sm text-slate-600 dark:text-slate-400 transition-colors">
+                        ¿Nuevo en la plataforma?
+                        <a href="#"
+                            class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline transition-colors">Crea
+                            una cuenta</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="hidden lg:flex lg:col-span-7 bg-[#001E2B] dark:bg-slate-900 relative overflow-hidden flex-col justify-center px-16 border-l border-slate-100 dark:border-slate-800">
+            <div class="absolute top-0 left-0 w-full h-full">
+                <div
+                    class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-emerald-500/20 rounded-full blur-[120px]">
+                </div>
+                <div
+                    class="absolute bottom-[-10%] left-[-10%] w-[400px] h-[400px] bg-blue-500/10 rounded-full blur-[100px]">
+                </div>
+            </div>
+
+            <div class="relative z-10 text-center flex flex-col items-center">
+                <div class="mb-8">
+                    <div class="flex items-center gap-2 text-emerald-400 font-bold text-2xl tracking-tight">
+                        <span>AutoParts</span>
+                        <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center text-slate-900">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5"
+                                stroke="currentColor" class="w-5 h-5">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="m21 7.5-9-5.25L3 7.5m18 0-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-5.25v9" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="text-4xl font-semibold text-white leading-tight max-w-lg">
+                    Control total de tu <span class="text-emerald-400">inventario de repuestos.</span>
+                </h2>
+                <p class="mt-6 text-slate-400 text-lg max-w-md leading-relaxed">Optimizado para la gestión de stock en
+                    tiempo real con arquitectura MVC.</p>
+
+                <div class="mt-12 p-6 border border-white/10 rounded-xl bg-white/5 backdrop-blur-md w-full max-w-sm">
+                    <div class="flex gap-1.5 mb-4 justify-end">
+                        <div class="w-2.5 h-2.5 rounded-full bg-emerald-500/50"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-yellow-500/50"></div>
+                        <div class="w-2.5 h-2.5 rounded-full bg-red-500/50"></div>
+                    </div>
+                    <div class="space-y-3 flex flex-col items-end">
+                        <div class="h-2 w-3/4 bg-emerald-500/30 rounded"></div>
+                        <div class="h-2 w-1/2 bg-slate-600/40 rounded"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <%- include('templates/footer', {js: 'login.js' }) %>
