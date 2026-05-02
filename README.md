@@ -45,9 +45,20 @@ Sigue estos pasos para configurar el proyecto en tu entorno local:
    npm install
    ```
 
-3. **Configuración de la Base de Datos:**
+3. **Configuración de Variables de Entorno:**
+   Crea un archivo llamado `.env` en la raíz del proyecto y agrega las siguientes variables (completa con las credenciales de tu base de datos y preferencias):
+   ```env
+   PORT=
+   BD_USER=
+   HOST=
+   DATABASE=
+   PASSWORD=
+   BD_PORT=
+   ```
+
+4. **Configuración de la Base de Datos:**
    - Asegúrate de tener tu base de datos creada en PostgreSQL.
-   - Configura las credenciales de acceso a la base de datos dentro del archivo `src/connect.ts` o en las variables de entorno que requiera tu configuración.
+   - El sistema utilizará las variables del archivo `.env` (leídas en `src/config.ts` y conectadas en `src/connect.ts`) para realizar la conexión.
 
 ---
 
