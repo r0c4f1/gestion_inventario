@@ -1,0 +1,188 @@
+<%- include('templates/header.ejs', {title: t('settings.title') }) %>
+
+    <%- include('templates/header_page', {title: t('settings.title') }) %>
+
+        <div
+            class="min-h-screen flex bg-[#F9FBFA] dark:bg-[#061621] text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+
+            <%- include('templates/sidebar') %>
+
+                <div id="main-content" class="flex-1 min-w-0 transition-all duration-500">
+
+                    <main class="p-6 md:p-10 space-y-8">
+
+                        <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+
+                            <div
+                                class="bg-white dark:bg-[#091E2C] rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-800 shadow-sm flex flex-col items-center justify-center text-center space-y-6">
+                                <div class="relative group">
+                                    <div
+                                        class="w-32 h-32 rounded-4xl overflow-hidden border-4 border-emerald-500/20 group-hover:border-emerald-500 transition-all duration-500 shadow-2xl shadow-emerald-500/10">
+                                        <img id="avatar-preview"
+                                            src="https://ui-avatars.com/api/?name=User&background=10b981&color=fff"
+                                            class="w-full h-full object-cover">
+                                    </div>
+                                    <label
+                                        class="absolute -bottom-2 -right-2 bg-emerald-500 p-3 rounded-2xl text-slate-900 cursor-pointer hover:scale-110 transition-transform shadow-lg">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="2.5" stroke="currentColor" class="w-5 h-5">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M6.827 6.175A2.31 2.31 0 0 1 5.186 7.23c-.38.054-.757.112-1.134.175C2.999 7.58 2.25 8.507 2.25 9.574V18a2.25 2.25 0 0 0 2.25 2.25h15A2.25 2.25 0 0 0 21.75 18V9.574c0-1.067-.75-1.994-1.802-2.169a47.865 47.865 0 0 0-1.134-.175 2.31 2.31 0 0 1-1.64-1.055l-.822-1.316a2.192 2.192 0 0 0-1.736-1.039 48.774 48.774 0 0 0-5.232 0 2.192 2.192 0 0 0-1.736 1.039l-.821 1.316Z" />
+                                        </svg>
+                                        <input type="file" class="hidden">
+                                    </label>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-black italic uppercase tracking-tighter">
+                                        <%= t('settings.admin_title') %>
+                                    </h3>
+                                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mt-1">ID_USER:
+                                        00492</p>
+                                </div>
+                            </div>
+
+                            <div
+                                class="xl:col-span-2 bg-white dark:bg-[#091E2C] rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-8">
+                                <h2
+                                    class="text-xs font-black uppercase tracking-[0.3em] text-emerald-500 border-b border-slate-100 dark:border-slate-800/50 pb-4">
+                                    <%= t('settings.credentials_title') %>
+                                </h2>
+
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-6">
+                                    <div class="space-y-2">
+                                        <label
+                                            class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                                            <%= t('settings.fullname_label') %>
+                                        </label>
+                                        <div
+                                            class="bg-slate-50 dark:bg-[#0D2A3E] rounded-2xl border border-slate-200 dark:border-slate-700 p-1 focus-within:ring-2 focus-within:ring-emerald-500/20">
+                                            <input type="text" value="Juan Pérez"
+                                                class="w-full bg-transparent px-5 py-3 text-sm font-bold italic text-slate-700 dark:text-emerald-400 outline-none">
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <label
+                                            class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                                            <%= t('settings.email_label') %>
+                                        </label>
+                                        <div
+                                            class="bg-slate-50 dark:bg-[#0D2A3E] rounded-2xl border border-slate-200 dark:border-slate-700 p-1 focus-within:ring-2 focus-within:ring-emerald-500/20">
+                                            <input type="email" value="admin@autoparts.com"
+                                                class="w-full bg-transparent px-5 py-3 text-sm font-bold italic text-slate-700 dark:text-emerald-400 outline-none">
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <label
+                                            class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                                            <%= t('settings.new_password_label') %>
+                                        </label>
+                                        <div
+                                            class="bg-slate-50 dark:bg-[#0D2A3E] rounded-2xl border border-slate-200 dark:border-slate-700 p-1 focus-within:ring-2 focus-within:ring-emerald-500/20">
+                                            <input type="password" placeholder="••••••••"
+                                                class="w-full bg-transparent px-5 py-3 text-sm outline-none">
+                                        </div>
+                                    </div>
+
+                                    <div class="space-y-2">
+                                        <label
+                                            class="text-[10px] font-black uppercase tracking-widest text-slate-400 ml-2">
+                                            <%= t('settings.confirm_password_label') %>
+                                        </label>
+                                        <div
+                                            class="bg-slate-50 dark:bg-[#0D2A3E] rounded-2xl border border-slate-200 dark:border-slate-700 p-1 focus-within:ring-2 focus-within:ring-emerald-500/20">
+                                            <input type="password" placeholder="••••••••"
+                                                class="w-full bg-transparent px-5 py-3 text-sm outline-none">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div
+                            class="bg-white dark:bg-[#091E2C] rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                            <div
+                                class="flex items-center justify-between border-b border-slate-100 dark:border-slate-800/50 pb-6">
+                                <div>
+                                    <h2 class="text-xl font-black italic uppercase tracking-tighter">
+                                        <%= t('settings.log_title') %>
+                                    </h2>
+                                    <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">
+                                        <%= t('settings.log_subtitle') %>
+                                    </p>
+                                </div>
+                                <button
+                                    class="px-6 py-3 bg-slate-100 dark:bg-slate-800 rounded-xl text-[10px] font-black uppercase tracking-widest hover:bg-emerald-500 hover:text-slate-900 transition-all">
+                                    <%= t('settings.export_log') %>
+                                </button>
+                            </div>
+
+                            <div id="logs-table-container"
+                                class="min-h-[300px] w-full bg-slate-50/50 dark:bg-[#061621]/30 rounded-3xl border-2 border-dashed border-slate-200 dark:border-slate-800 flex items-center justify-center">
+                                <div class="text-center space-y-3">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor"
+                                        class="w-12 h-12 mx-auto text-slate-300">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 0 1 0 3.75H5.625a1.875 1.875 0 0 1 0-3.75Z" />
+                                    </svg>
+                                    <p class="text-xs font-bold text-slate-400 uppercase tracking-widest italic">
+                                        <%= t('settings.grid_placeholder') %>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                            <div
+                                class="bg-white dark:bg-[#091E2C] rounded-[2.5rem] p-10 border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                                <h3 class="text-xs font-black uppercase tracking-widest text-emerald-500">
+                                    <%= t('settings.preferences_title') %>
+                                </h3>
+                                <div class="space-y-4">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm font-bold italic">
+                                            <%= t('settings.system_language') %>
+                                        </span>
+                                        <select id="select-language"
+                                            class="bg-slate-50 dark:bg-[#0D2A3E] border-none rounded-xl px-7 py-2 text-xs outline-none">
+                                            <option value="es">Español (ES)</option>
+                                            <option value="en">English (US)</option>
+                                        </select>
+                                    </div>
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-sm font-bold italic">
+                                            <%= t('settings.email_notifications') %>
+                                        </span>
+                                        <input type="checkbox" checked
+                                            class="w-5 h-5 rounded border-none bg-emerald-500/20 text-emerald-500 focus:ring-0">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="bg-red-500/5 dark:bg-red-500/5 rounded-[2.5rem] p-10 border border-red-500/10 shadow-sm space-y-6">
+                                <h3 class="text-xs font-black uppercase tracking-widest text-red-500">
+                                    <%= t('settings.critical_zone_title') %>
+                                </h3>
+                                <p class="text-[10px] text-slate-500 uppercase font-bold leading-relaxed">
+                                    <%= t('settings.critical_zone_warning') %>
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4">
+                                    <button
+                                        class="px-8 py-4 bg-red-500/10 text-red-600 rounded-2xl text-[10px] font-black uppercase tracking-widest hover:bg-red-500 hover:text-white transition-all">
+                                        <%= t('settings.reset_inventory') %>
+                                    </button>
+                                    <button
+                                        class="px-8 py-4 bg-slate-900 dark:bg-red-600 text-white rounded-2xl text-[10px] font-black uppercase tracking-widest shadow-xl shadow-red-500/20">
+                                        <%= t('settings.global_logout') %>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </main>
+                </div>
+        </div>
+
+        <%- include('templates/footer.ejs', { js: 'settings' }) %>

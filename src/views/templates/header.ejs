@@ -7,7 +7,16 @@
     <title>
         <%= title %>
     </title>
-    <link href="styles/output.css" rel="stylesheet">
+    <script>
+        // Verificamos la preferencia antes de que el resto de la página cargue
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <link href="/styles/output.css" rel="stylesheet">
 </head>
 
 <body>

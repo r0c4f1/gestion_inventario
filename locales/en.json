@@ -1,0 +1,147 @@
+{
+    "common": {
+        "cancel": "Cancel",
+        "save": "Save",
+        "search": "Search...",
+        "actions": "Actions",
+        "select": "Select..."
+    },
+    "login": {
+        "title": "Log In",
+        "subtitle": "Enter your details to continue.",
+        "email_label": "Email",
+        "password_label": "Password",
+        "forgot_password": "Forgot password?",
+        "submit_btn": "Enter System",
+        "new_user": "New to the platform?",
+        "create_account": "Create an account",
+        "hero_title_1": "Full control of your",
+        "hero_title_2": "spare parts inventory.",
+        "hero_subtitle": "Optimized for real-time stock management with MVC architecture."
+    },
+    "sidebar": {
+        "dashboard": "Dashboard",
+        "inventory": "Inventory",
+        "io_inventory": "IO Inventory",
+        "products": "Products",
+        "categories": "Categories",
+        "models": "Models",
+        "brands": "Brands",
+        "settings": "Settings",
+        "theme": "Theme",
+        "version": "v4.0"
+    },
+    "header": {
+        "my_profile": "My Profile",
+        "settings": "Settings",
+        "logout": "Log Out"
+    },
+    "inventory": {
+        "title": "General Inventory"
+    },
+    "io_inventory": {
+        "page_title": "Inventory Movements",
+        "header_title": "Input and Output",
+        "import_massive": "Massive Import",
+        "import_desc": "Upload your <span class=\"text-slate-900 dark:text-white font-bold\">.xlsx</span> or <span class=\"text-slate-900 dark:text-white font-bold\">.csv</span> file to update the stock automatically.",
+        "click_drag": "Click to select or drag the file",
+        "supported_formats": "Supported formats: Excel, CSV",
+        "latest": "Latest",
+        "movements": "Movements",
+        "history_record": "Historical record of inputs and outputs",
+        "search_placeholder": "SEARCH MOVEMENT...",
+        "loading_data": "Loading Master Data...",
+        "process_selected": "Process Selected Movements",
+        "select_type": "Select a movement type",
+        "type_in": "Input",
+        "type_out": "Output"
+    },
+    "products": {
+        "title": "Products",
+        "new_product": "New Product",
+        "id_label": "PRODUCT_ID",
+        "code_label": "CODE",
+        "code_placeholder": "Select a code",
+        "name_label": "NAME",
+        "name_placeholder": "Full product description...",
+        "brand_label": "BRAND_ID",
+        "select_brand": "Select Brand",
+        "model_label": "MODEL_ID",
+        "select_model": "Select Model",
+        "category_label": "CAT_ID",
+        "select_category": "Select Category",
+        "quantity_label": "QUANTITY",
+        "cost_label": "COST",
+        "profit_label": "PROFIT (%)",
+        "final_price_label": "Final Sale Price",
+        "submit_btn": "Process Product Registration",
+        "media_manager": "Media Asset Manager",
+        "upload_media": "Upload media files",
+        "media_formats": "* Supports JPG, PNG and WEBP. Maximum 5MB per file. Images will be optimized automatically."
+    },
+    "categories": {
+        "title": "Categories",
+        "add_btn": "Add Category"
+    },
+    "models": {
+        "title": "Models",
+        "add_btn": "Add Model"
+    },
+    "brands": {
+        "title": "Brands",
+        "add_btn": "Add Brand"
+    },
+    "settings": {
+        "title": "System Settings",
+        "admin_title": "Main Administrator",
+        "credentials_title": "Credentials and Data",
+        "fullname_label": "Full Name",
+        "email_label": "Email Address",
+        "new_password_label": "New Password",
+        "confirm_password_label": "Confirm Password",
+        "log_title": "Activity Log",
+        "log_subtitle": "History of movements and changes in the system",
+        "export_log": "Export Log",
+        "grid_placeholder": "Your Grid.js table will be rendered here",
+        "preferences_title": "Preferences",
+        "system_language": "System Language",
+        "email_notifications": "Email Notifications",
+        "critical_zone_title": "Critical Zone",
+        "critical_zone_warning": "The following actions are irreversible and affect the master database.",
+        "reset_inventory": "Reset Inventory",
+        "global_logout": "Global Logout"
+    },
+    "dashboard": {
+        "title": "Dashboard",
+        "executive_summary": "Executive Summary",
+        "summary_desc": "AutoParts performance and stock analysis.",
+        "export_report": "Export Report",
+        "new_record": "+ New Record",
+        "main_metrics": "Main Metrics",
+        "active_skus": "Active SKUs",
+        "critical_stock": "Critical Stock",
+        "inventory_turnover": "Inventory Turnover",
+        "revenue_today": "Revenue (Today)",
+        "based_on_sales": "Based on 24 sales",
+        "stock_trend": "Stock Trend",
+        "incomes": "Incomes",
+        "outcomes": "Outcomes",
+        "recent_activity": "Recent Activity",
+        "stock_entry": "Stock Entry",
+        "counter_sale": "Counter Sale",
+        "view_all_history": "View all history"
+    },
+    "modals": {
+        "new": "New",
+        "new_f": "New",
+        "model": "Model",
+        "brand": "Brand",
+        "reference": "Reference",
+        "id": "ID",
+        "brands_label": "Brands",
+        "model_name_label": "Model Name",
+        "model_name_placeholder": "E.g. Hilux...",
+        "brand_name_label": "Brand Name",
+        "brand_name_placeholder": "E.g. Toyota..."
+    }
+}

@@ -22,15 +22,14 @@
             <div class="w-full max-w-[400px]">
                 <div class="mb-10">
                     <h1 class="text-2xl font-bold text-slate-900 dark:text-white tracking-tight transition-colors">
-                        Iniciar Sesión</h1>
-                    <p class="text-slate-500 dark:text-slate-400 mt-1 transition-colors">Ingresa tus datos para
-                        continuar.</p>
+                        <%= t('login.title') %></h1>
+                    <p class="text-slate-500 dark:text-slate-400 mt-1 transition-colors"><%= t('login.subtitle') %></p>
                 </div>
 
                 <form action="#" class="space-y-5">
                     <div>
                         <label
-                            class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5 transition-colors">Email</label>
+                            class="block text-sm font-semibold text-slate-700 dark:text-slate-300 mb-1.5 transition-colors"><%= t('login.email_label') %></label>
                         <input type="email" required
                             class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 dark:text-white"
                             placeholder="admin@autoparts.com">
@@ -39,10 +38,8 @@
                     <div>
                         <div class="flex justify-between items-center mb-1.5">
                             <label
-                                class="block text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors">Contraseña</label>
-                            <a href="#"
-                                class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline transition-colors">¿La
-                                olvidaste?</a>
+                                class="block text-sm font-semibold text-slate-700 dark:text-slate-300 transition-colors"><%= t('login.password_label') %></label>
+                                <a href="#" class="text-xs font-bold text-emerald-600 dark:text-emerald-400 hover:underline transition-colors"><%= t('login.forgot_password') %></a>
                         </div>
                         <input type="password" required
                             class="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-md focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition-all placeholder:text-slate-400 dark:text-white"
@@ -51,16 +48,14 @@
 
                     <button type="submit"
                         class="w-full bg-slate-900 dark:bg-emerald-600 hover:bg-slate-800 dark:hover:bg-emerald-500 text-white font-bold py-3 rounded-md transition-all duration-200 transform active:scale-[0.98] mt-2 shadow-lg dark:shadow-emerald-900/20">
-                        Entrar al Sistema
+                        <%= t('login.submit_btn') %>
                     </button>
                 </form>
 
                 <div class="mt-8 pt-8 border-t border-slate-100 dark:border-slate-800 text-center">
                     <p class="text-sm text-slate-600 dark:text-slate-400 transition-colors">
-                        ¿Nuevo en la plataforma?
-                        <a href="#"
-                            class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline transition-colors">Crea
-                            una cuenta</a>
+                        <%= t('login.new_user') %>
+                        <a href="#" class="font-bold text-emerald-600 dark:text-emerald-400 hover:underline transition-colors"><%= t('login.create_account') %></a>
                     </p>
                 </div>
             </div>
@@ -91,10 +86,9 @@
                     </div>
                 </div>
                 <h2 class="text-4xl font-semibold text-white leading-tight max-w-lg">
-                    Control total de tu <span class="text-emerald-400">inventario de repuestos.</span>
+                    <%= t('login.hero_title_1') %> <span class="text-emerald-400"><%= t('login.hero_title_2') %></span>
                 </h2>
-                <p class="mt-6 text-slate-400 text-lg max-w-md leading-relaxed">Optimizado para la gestión de stock en
-                    tiempo real con arquitectura MVC.</p>
+                <p class="mt-6 text-slate-400 text-lg max-w-md leading-relaxed"><%= t('login.hero_subtitle') %></p>
 
                 <div class="mt-12 p-6 border border-white/10 rounded-xl bg-white/5 backdrop-blur-md w-full max-w-sm">
                     <div class="flex gap-1.5 mb-4 justify-end">
@@ -112,4 +106,4 @@
     </div>
 
 
-    <%- include('templates/footer', {js: 'login.js' }) %>
+    <%- include('templates/footer', {js: 'login' }) %>

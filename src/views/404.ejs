@@ -1,0 +1,52 @@
+<%- include('templates/header', {title: 'Página no Encontrada - 404' }) %>
+
+    <div
+        class="min-h-screen md:flex bg-[#F9FBFA] dark:bg-[#061621] text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+
+        <%- include('templates/sidebar') %>
+
+            <div id="main-content" class="flex-1 min-w-0 transition-all duration-500">
+                <%- include('templates/header_page', {title: "Error 404" }) %>
+
+                    <main class="p-6 flex-1 flex flex-col items-center justify-center min-h-[80vh]">
+                        <div
+                            class="bg-white dark:bg-[#091E2C] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm p-12 max-w-2xl w-full text-center space-y-8">
+
+                            <div class="flex justify-center">
+                                <div
+                                    class="w-32 h-32 bg-emerald-50 dark:bg-emerald-500/10 rounded-full flex items-center justify-center text-emerald-500 relative animate-pulse">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="1.5" stroke="currentColor" class="w-16 h-16 relative z-10">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+                                    </svg>
+                                    <div class="absolute inset-0 bg-emerald-500/20 blur-xl rounded-full"></div>
+                                </div>
+                            </div>
+
+                            <div>
+                                <h1 class="text-7xl font-black text-slate-900 dark:text-white tracking-tighter mb-4">404
+                                </h1>
+                                <h2 class="text-2xl font-bold tracking-tight mb-2">¡Ruta no encontrada!</h2>
+                                <p class="text-slate-500 dark:text-slate-400 text-lg">Lo sentimos, la página que
+                                    intentas visitar no existe o ha sido movida.</p>
+                            </div>
+
+                            <div class="pt-8 border-t border-slate-100 dark:border-slate-800">
+                                <a href="/dashboard"
+                                    class="inline-flex items-center justify-center gap-2 px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-slate-900 rounded-xl font-black uppercase tracking-widest text-xs shadow-xl shadow-emerald-500/20 transition-all hover:scale-105">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                        stroke-width="2" stroke="currentColor" class="w-5 h-5">
+                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                            d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3" />
+                                    </svg>
+                                    Volver al Inicio
+                                </a>
+                            </div>
+                        </div>
+                    </main>
+
+            </div>
+    </div>
+
+    <%- include('templates/footer', {js: 'sidebar.js' }) %>

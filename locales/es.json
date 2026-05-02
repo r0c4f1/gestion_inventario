@@ -1,0 +1,147 @@
+{
+    "common": {
+        "cancel": "Cancelar",
+        "save": "Guardar",
+        "search": "Buscar...",
+        "actions": "Acciones",
+        "select": "Seleccione..."
+    },
+    "login": {
+        "title": "Iniciar Sesión",
+        "subtitle": "Ingresa tus datos para continuar.",
+        "email_label": "Email",
+        "password_label": "Contraseña",
+        "forgot_password": "¿La olvidaste?",
+        "submit_btn": "Entrar al Sistema",
+        "new_user": "¿Nuevo en la plataforma?",
+        "create_account": "Crea una cuenta",
+        "hero_title_1": "Control total de tu",
+        "hero_title_2": "inventario de repuestos.",
+        "hero_subtitle": "Optimizado para la gestión de stock en tiempo real con arquitectura MVC."
+    },
+    "sidebar": {
+        "dashboard": "Panel de Control",
+        "inventory": "Inventario",
+        "io_inventory": "E/S de Inventario",
+        "products": "Productos",
+        "categories": "Categorías",
+        "models": "Modelos",
+        "brands": "Marcas",
+        "settings": "Configuración",
+        "theme": "Tema",
+        "version": "v4.0"
+    },
+    "header": {
+        "my_profile": "Mi Perfil",
+        "settings": "Configuración",
+        "logout": "Cerrar Sesión"
+    },
+    "inventory": {
+        "title": "Inventario General"
+    },
+    "io_inventory": {
+        "page_title": "Movimientos de Inventario",
+        "header_title": "Entrada y salida",
+        "import_massive": "Importación Masiva",
+        "import_desc": "Sube tu archivo <span class=\"text-slate-900 dark:text-white font-bold\">.xlsx</span> o <span class=\"text-slate-900 dark:text-white font-bold\">.csv</span> para actualizar el stock automáticamente.",
+        "click_drag": "Click para seleccionar o arrastra el archivo",
+        "supported_formats": "Formatos admitidos: Excel, CSV",
+        "latest": "Últimos",
+        "movements": "Movimientos",
+        "history_record": "Registro histórico de entradas y salidas",
+        "search_placeholder": "BUSCAR MOVIMIENTO...",
+        "loading_data": "Cargando Datos del Maestro...",
+        "process_selected": "Procesar Movimientos Seleccionados",
+        "select_type": "Seleccione un tipo de movimiento",
+        "type_in": "Entrada",
+        "type_out": "Salida"
+    },
+    "products": {
+        "title": "Productos",
+        "new_product": "Nuevo Producto",
+        "id_label": "ID_PRODUCTO",
+        "code_label": "CÓDIGO",
+        "code_placeholder": "Seleccione un código",
+        "name_label": "NOMBRE",
+        "name_placeholder": "Descripción completa del producto...",
+        "brand_label": "ID_MARCA",
+        "select_brand": "Seleccionar Marca",
+        "model_label": "ID_MODELO",
+        "select_model": "Seleccionar Modelo",
+        "category_label": "ID_CAT",
+        "select_category": "Seleccionar Categoría",
+        "quantity_label": "CANTIDAD",
+        "cost_label": "COSTO",
+        "profit_label": "GANANCIA (%)",
+        "final_price_label": "Precio Venta Final",
+        "submit_btn": "Procesar Alta de Producto",
+        "media_manager": "Media Asset Manager",
+        "upload_media": "Subir archivos multimedia",
+        "media_formats": "* Soporta JPG, PNG y WEBP. Máximo 5MB por archivo. Las imágenes se optimizarán automáticamente."
+    },
+    "categories": {
+        "title": "Categorías",
+        "add_btn": "Agregar Categoría"
+    },
+    "models": {
+        "title": "Modelos",
+        "add_btn": "Agregar Modelo"
+    },
+    "brands": {
+        "title": "Marcas",
+        "add_btn": "Agregar Marca"
+    },
+    "settings": {
+        "title": "Configuración del Sistema",
+        "admin_title": "Administrador Principal",
+        "credentials_title": "Credenciales y Datos",
+        "fullname_label": "Nombre Completo",
+        "email_label": "Correo Electrónico",
+        "new_password_label": "Nueva Contraseña",
+        "confirm_password_label": "Confirmar Contraseña",
+        "log_title": "Registro de Actividad (Log)",
+        "log_subtitle": "Historial de movimientos y cambios en el sistema",
+        "export_log": "Exportar Log",
+        "grid_placeholder": "Aquí se renderizará tu tabla de Grid.js",
+        "preferences_title": "Preferencias",
+        "system_language": "Idioma del Sistema",
+        "email_notifications": "Notificaciones por Correo",
+        "critical_zone_title": "Zona Crítica",
+        "critical_zone_warning": "Las siguientes acciones son irreversibles y afectan la base de datos maestra.",
+        "reset_inventory": "Resetear Inventario",
+        "global_logout": "Cerrar Sesión Global"
+    },
+    "dashboard": {
+        "title": "Panel de Control",
+        "executive_summary": "Resumen Ejecutivo",
+        "summary_desc": "Análisis de rendimiento y existencias de AutoParts.",
+        "export_report": "Exportar Reporte",
+        "new_record": "+ Nuevo Registro",
+        "main_metrics": "Métricas Principales",
+        "active_skus": "SKUs Activos",
+        "critical_stock": "Stock Crítico",
+        "inventory_turnover": "Rotación de Inventario",
+        "revenue_today": "Ingresos (Hoy)",
+        "based_on_sales": "Basado en 24 ventas",
+        "stock_trend": "Tendencia de Stock",
+        "incomes": "Entradas",
+        "outcomes": "Salidas",
+        "recent_activity": "Actividad Reciente",
+        "stock_entry": "Entrada Stock",
+        "counter_sale": "Venta Mostrador",
+        "view_all_history": "Ver todo el historial"
+    },
+    "modals": {
+        "new": "Nuevo",
+        "new_f": "Nueva",
+        "model": "Modelo",
+        "brand": "Marca",
+        "reference": "Referencia",
+        "id": "ID",
+        "brands_label": "Marcas",
+        "model_name_label": "Nombre del Modelo",
+        "model_name_placeholder": "Ej: Hilux...",
+        "brand_name_label": "Nombre de la Marca",
+        "brand_name_placeholder": "Ej: Toyota..."
+    }
+}

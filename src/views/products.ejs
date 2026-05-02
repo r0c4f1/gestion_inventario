@@ -1,0 +1,242 @@
+<%- include('templates/header', {title: t('products.new_product') }) %>
+
+    <div
+        class="min-h-screen flex bg-[#F9FBFA] dark:bg-[#061621] text-slate-900 dark:text-slate-100 font-sans transition-colors duration-300">
+
+        <%- include('templates/sidebar') %>
+
+            <div id="main-content" class="flex-1 min-w-0 transition-all duration-500">
+
+                <%- include('templates/header_page', {title: t('products.title') }) %>
+
+                    <main class="p-6 flex-1 flex flex-col">
+                        <form action="/products/create" method="POST" enctype="multipart/form-data"
+                            class="flex flex-col lg:flex-row gap-6 h-full">
+
+                            <div
+                                class="flex-1 bg-white dark:bg-[#091E2C] border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm p-8 space-y-8 overflow-y-auto">
+
+                                <div class="grid grid-cols-1 xl:grid-cols-2 gap-x-12 gap-y-6">
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.id_label') %>
+                                        </div>
+                                        <input type="text" disabled value="PRD-AUTO-001"
+                                            class="flex-1 bg-slate-100 dark:bg-slate-800/50 border-none rounded-xl px-4 py-3 text-sm text-slate-500 italic font-mono">
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.code_label') %>
+                                        </div>
+                                        <select id="" name="codigo"
+                                            class="flex-1 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500/20 outline-none transition-all">
+                                            <option value="0">
+                                                <%= t('products.code_placeholder') %>
+                                            </option>
+                                        </select>
+                                    </div>
+
+                                    <div class="flex items-center gap-4 xl:col-span-2">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.name_label') %>
+                                        </div>
+                                        <input type="text" name="nombre"
+                                            placeholder="<%= t('products.name_placeholder') %>"
+                                            class="flex-1 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm font-bold italic text-emerald-600 dark:text-emerald-400 outline-none">
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.brand_label') %>
+                                        </div>
+                                        <div class="flex flex-1 gap-2">
+                                            <input type="text" id="brand_code" readonly value="M-01"
+                                                class="w-16 text-center bg-slate-100 dark:bg-slate-800/50 border-none rounded-lg py-3 text-xs text-slate-400 font-mono">
+                                            <select name="marca" id="brand_select"
+                                                class="flex-1 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-3 text-sm outline-none">
+                                                <option value="">
+                                                    <%= t('products.select_brand') %>
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.model_label') %>
+                                        </div>
+                                        <div class="flex flex-1 gap-2">
+                                            <input type="text" id="model_code" readonly value="MOD-0"
+                                                class="w-16 text-center bg-slate-100 dark:bg-slate-800/50 border-none rounded-lg py-3 text-xs text-slate-400 font-mono">
+                                            <select name="modelo" id="model_select"
+                                                class="flex-1 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-3 text-sm outline-none">
+                                                <option value="">
+                                                    ---
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.category_label') %>
+                                        </div>
+                                        <div class="flex flex-1 gap-2">
+                                            <input type="text" readonly value="CAT-0"
+                                                class="w-16 text-center bg-slate-100 dark:bg-slate-800/50 border-none rounded-lg py-3 text-xs text-slate-400 font-mono">
+                                            <select name="categoria"
+                                                class="flex-1 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-lg px-3 py-3 text-sm outline-none">
+                                                <option value="">
+                                                    <%= t('products.select_category') %>
+                                                </option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.quantity_label') %>
+                                        </div>
+                                        <input type="number" name="cantidad" placeholder="0"
+                                            class="flex-1 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-emerald-500/20 outline-none transition-all">
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.cost_label') %>
+                                        </div>
+                                        <div class="relative flex-1">
+                                            <span
+                                                class="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs">$</span>
+                                            <input type="number" id="input-costo" name="costo" step="0.01"
+                                                class="w-full pl-8 pr-4 py-3 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-xl text-sm outline-none">
+                                        </div>
+                                    </div>
+
+                                    <div class="flex items-center gap-4">
+                                        <div
+                                            class="w-24 shrink-0 text-[10px] font-black uppercase tracking-widest text-slate-400 text-right">
+                                            <%= t('products.profit_label') %>
+                                        </div>
+                                        <div class="relative flex-1">
+                                            <span
+                                                class="absolute right-4 top-1/2 -translate-y-1/2 text-slate-400 text-xs">%</span>
+                                            <input type="number" id="input-porcentaje" name="porcentaje" placeholder="0"
+                                                class="w-full pr-8 pl-4 py-3 bg-slate-50 dark:bg-[#0D2A3E] border border-slate-200 dark:border-slate-700 rounded-xl text-sm outline-none focus:ring-2 focus:ring-emerald-500/20 transition-all">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div
+                                    class="pt-8 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between">
+                                    <div class="flex items-center gap-6">
+                                        <div class="text-right">
+                                            <p class="text-[9px] font-black text-slate-400 uppercase">
+                                                <%= t('products.final_price_label') %>
+                                            </p>
+                                            <div class="relative">
+                                                <span
+                                                    class="absolute left-0 top-1/2 -translate-y-1/2 text-2xl font-bold text-emerald-500">$</span>
+                                                <input type="number" id="input-precio" name="precio" placeholder="0.00"
+                                                    class="bg-transparent pl-6 border-none text-3xl font-black text-slate-900 dark:text-white focus:ring-0 w-40">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="flex gap-4">
+                                        <button type="button"
+                                            class="px-6 py-3 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-red-500 transition-colors">
+                                            <%= t('common.cancel') %>
+                                        </button>
+                                        <button type="submit"
+                                            class="px-10 py-4 bg-emerald-500 hover:bg-emerald-600 text-slate-900 rounded-xl font-black uppercase tracking-widest text-xs shadow-xl shadow-emerald-500/20 transition-all">
+                                            <%= t('products.submit_btn') %>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="w-full lg:w-[400px] flex flex-col gap-6 shrink-0">
+                                <div
+                                    class="bg-white dark:bg-[#091E2C] border border-slate-200 dark:border-slate-800 rounded-2xl p-6 shadow-sm flex-1 flex flex-col">
+                                    <label
+                                        class="text-[10px] font-black uppercase tracking-widest text-slate-500 mb-6 flex items-center gap-2">
+                                        <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></span>
+                                        <%= t('products.media_manager') %>
+                                    </label>
+
+                                    <div id="dropzone"
+                                        class="border-2 relative border-dashed border-slate-200 dark:border-slate-700 rounded-2xl p-8 transition-all hover:border-emerald-500 group flex flex-col items-center justify-center bg-slate-50/50 dark:bg-slate-800/10 mb-6 cursor-pointer">
+                                        <input type="file" name="photos" id="photo-input" multiple accept="image/*"
+                                            class="absolute opacity-0 w-full h-full cursor-pointer">
+                                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                            stroke-width="1" stroke="currentColor"
+                                            class="w-12 h-12 text-slate-400 group-hover:text-emerald-500 transition-colors">
+                                            <path stroke-linecap="round" stroke-linejoin="round"
+                                                d="M12 4.5v15m7.5-7.5h-15" />
+                                        </svg>
+                                        <p class="text-[10px] mt-4 font-bold text-slate-400 uppercase tracking-tighter">
+                                            <%= t('products.upload_media') %>
+                                        </p>
+                                    </div>
+
+                                    <div id="preview-container"
+                                        class="grid grid-cols-2 gap-3 overflow-y-auto max-h-[400px] pr-2"></div>
+
+                                    <div
+                                        class="mt-auto pt-6 text-[10px] text-slate-500 italic leading-relaxed border-t border-slate-100 dark:border-slate-800">
+                                        <%= t('products.media_formats') %>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </main>
+            </div>
+    </div>
+
+    <script>
+        // Lógica para la vista previa de fotos
+        const photoInput = document.getElementById('photo-input');
+        const previewContainer = document.getElementById('preview-container');
+
+        photoInput.addEventListener('change', function () {
+            previewContainer.innerHTML = ''; // Limpiar previas anteriores
+
+            const files = Array.from(this.files);
+
+            files.forEach(file => {
+                if (file.type.startsWith('image/')) {
+                    const reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        const div = document.createElement('div');
+                        div.className = 'relative group h-24 rounded-lg overflow-hidden border border-slate-200 dark:border-slate-800';
+                        div.innerHTML = `
+                        <img src="${e.target.result}" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                            <button type="button" class="text-white bg-red-500 p-1 rounded-full hover:bg-red-600 transition-colors">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-4 h-4">
+                                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
+                    `;
+                        previewContainer.appendChild(div);
+                    };
+
+                    reader.readAsDataURL(file);
+                }
+            });
+        });
+    </script>
+
+    <%- include('templates/footer', {js: 'products' }) %>
